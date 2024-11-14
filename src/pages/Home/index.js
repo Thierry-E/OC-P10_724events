@@ -14,7 +14,17 @@ import { useData } from '../../contexts/DataContext'
 
 const Page = () => {
   const { data } = useData()
+  // Affichage du dernier évênement du tableau
   const last = data ? data.events[data.events.length - 1] : undefined
+  /* Affichage du dernier Evênement ayant la date la plus récente :
+  last = && data.events && data.events.length > 0 
+  data.events.reduce((latest, current) => {
+    const latestData = new Date(latest.date);
+    cont currentDate = new Date(current.date);
+          return currentDate > latestDate ? current : latest;
+        })
+      : null;
+  */
   return (
     <>
       <header>
